@@ -6,7 +6,7 @@
   .map-wrapper {
     position: absolute;
     top: 0;
-    height: 60vh;
+    height: calc(100vh - 300px);
     .parking-marker {
       position: relative;
 
@@ -48,7 +48,7 @@
     position: absolute;
     bottom: 0;
     width: 100%;
-    min-height: 300px;
+    min-height: 320px;
     background-color: white;
     border-radius: 20px 20px 0 0;
     padding: 30px;
@@ -70,8 +70,8 @@
 
         h4 {
           font-size: 14px;
-          color: #dadadc;
-          font-weight: 300;
+          color: #262e45;
+          font-weight: bold;
 
           span {
             color: #057dda;
@@ -81,8 +81,8 @@
 
         h5 {
           font-size: 14px;
-          colro: #262e45;
-          font-weight: bold;
+          color: #dadadc;
+          font-weight: 300;
         }
 
         .week-info {
