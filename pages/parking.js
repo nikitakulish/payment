@@ -1,4 +1,3 @@
-import {useRouter} from 'next/router'
 import ReactMapGL, {Marker} from 'react-map-gl';
 import {useState} from "react";
 
@@ -16,7 +15,6 @@ const initialState = {
 
 export default function Parking() {
     const [state, setState] = useState(initialState);
-    const router = useRouter();
 
     return (
         <div>
