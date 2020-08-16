@@ -67,10 +67,12 @@ export default function Parking() {
                     <div className="section-item">
                         <img className="icon" src="/static/images/clock.svg" alt=""/>
                         <div className="content">
-                            <h4>Informacja - <span>Płatny</span></h4>
-                            <h5>Od pn. do pt. <br/>
-                                9.00 - 17.00</h5>
+                            <h4>Wybierz czas - <span>1 godz.</span></h4>
                         </div>
+                    </div>
+
+                    <div className="section-item">
+                        <button>Parkuj</button>
                     </div>
                 </div>
             </div>
