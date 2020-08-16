@@ -4,7 +4,7 @@ import {useState} from "react";
 const initialState = {
     viewport: {
         width: '100vw',
-        height: '100vh',
+        height: '100%',
         latitude: 54.379581,
         longitude: 18.604124,
         zoom: 17,
@@ -19,19 +19,21 @@ export default function Parking() {
     return (
         <div>
             <div className="parking-page">
-                <ReactMapGL
-                    mapStyle="mapbox://styles/nikitakulish/ckdwufjvw1m0819lgwfuns5d3"
-                    mapboxApiAccessToken="pk.eyJ1IjoibmlraXRha3VsaXNoIiwiYSI6ImNrOXI3NDM4MjByYmozZ21lcTlheHF3aWYifQ.f3K1k5ougE1FGvCE5BXRDw"
-                    onViewportChange={(viewport) => setState({viewport})}
-                    {...state.viewport}>
-                    <Marker latitude={54.379581} longitude={18.604124} offsetLeft={-10} offsetTop={-10}>
-                        <div className="parking-marker">
-                            <img src="/static/images/pin.svg" alt=""/>
-                            <span className="pulse-marker p1"></span>
-                            <span className="pulse-marker p2"></span>
-                        </div>
-                    </Marker>
-                </ReactMapGL>
+                <div className="map-wrapper">
+                    <ReactMapGL
+                        mapStyle="mapbox://styles/nikitakulish/ckdwufjvw1m0819lgwfuns5d3"
+                        mapboxApiAccessToken="pk.eyJ1IjoibmlraXRha3VsaXNoIiwiYSI6ImNrOXI3NDM4MjByYmozZ21lcTlheHF3aWYifQ.f3K1k5ougE1FGvCE5BXRDw"
+                        onViewportChange={(viewport) => setState({viewport})}
+                        {...state.viewport}>
+                        <Marker latitude={54.379581} longitude={18.604124} offsetLeft={-10} offsetTop={-10}>
+                            <div className="parking-marker">
+                                <img src="/static/images/pin.svg" alt=""/>
+                                <span className="pulse-marker p1"></span>
+                                <span className="pulse-marker p2"></span>
+                            </div>
+                        </Marker>
+                    </ReactMapGL>
+                </div>
                 <div className="bottom-sheet">
                     <div className="section-item">
                         <img className="icon" src="/static/images/car-parking.svg" alt=""/>
